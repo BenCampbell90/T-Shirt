@@ -12,7 +12,7 @@ const Shirt = () => {
   const snap = useSnapshot(state);
   const { nodes, materials } = useGLTF("/shirt_baked.glb");
 
-  const logoTexture = useTexture(snap.localDecal);
+  const logoTexture = useTexture(snap.logoDecal);
   logoTexture.anisotropy = 16;
   const fullTexture = useTexture(snap.fullDecal);
 
