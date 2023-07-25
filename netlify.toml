@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "cd client && vite build && cd ../server && npm run build"
   functions = "server/functions"
   publish = "client/dist"
 
