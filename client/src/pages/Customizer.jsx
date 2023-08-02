@@ -146,7 +146,7 @@ const Customizer = () => {
                     <Tab
                       key={tab.name}
                       tab={tab}
-                      handleEditorTabClick={() => setActiveEditorTab(tab.name)}
+                      handleEditorTabClick={handleEditorTabClick(tab.name)}
                     />
                   );
                 })}
