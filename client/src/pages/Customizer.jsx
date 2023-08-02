@@ -115,6 +115,14 @@ const Customizer = () => {
     });
   };
 
+  const handleEditorTabClick = (tabName) => {
+    if (activeEditorTab === tabName) {
+      setActiveEditorTab("");
+      return;
+    }
+    setActiveEditorTab(tabName);
+  };
+
   const readFile = (type) => {
     reader(file).then((result) => {
       handleDecals(type, result);
@@ -138,7 +146,7 @@ const Customizer = () => {
                     <Tab
                       key={tab.name}
                       tab={tab}
-                      handleClick={() => setActiveEditorTab(tab.name)}
+                      handleEditorTabClick={() => setActiveEditorTab(tab.name)}
                     />
                   );
                 })}
