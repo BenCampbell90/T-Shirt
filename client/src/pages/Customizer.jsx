@@ -45,7 +45,7 @@ const Customizer = () => {
       //call backend to generate an ai image.
       setGeneratingImg(true);
 
-      const response = await fetch('https://project-threejs-ai-16ct.onrender.com/dalle', {
+      const response = await fetch('https://t-shirt-backend-theta.vercel.app/dalle', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
