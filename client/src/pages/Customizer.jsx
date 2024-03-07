@@ -47,6 +47,7 @@ const Customizer = () => {
 
       const response = await fetch('https://t-shirt-backend-theta.vercel.app/dalle', {
         method: 'POST',
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
