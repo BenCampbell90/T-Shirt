@@ -8,13 +8,7 @@ dotenv.config();
 
 const app = express();
 // Set up CORS
-app.use(
-  cors({
-    origin: 'https://t-shirt-kappa.vercel.app', // specify the origin here
-    methods: ['GET', 'POST'], // specify the methods here
-    allowedHeaders: ['Content-Type', 'Authorization'],
-  })
-);
+app.use(cors());
 
 app.use(express.json({ limit: '50mb' }));
 
