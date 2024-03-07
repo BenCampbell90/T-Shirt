@@ -7,7 +7,15 @@ import dalleRoutes from './routes/dalleRoutes.js';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+// Set up CORS
+app.use(
+  cors({
+    origin: 'https://t-shirt-kappa.vercel.app', // specify the origin here
+    methods: ['GET', 'POST'], // specify the methods here
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  })
+);
+
 app.use(express.json({ limit: '50mb' }));
 
 app.use('/dalle', dalleRoutes);
